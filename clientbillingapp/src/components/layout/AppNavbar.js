@@ -22,7 +22,7 @@ class AppNavbar extends Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link to="/" className="nav-link">
-                  Da board
+                  da Board
                 </Link>
               </li>
             </ul>
