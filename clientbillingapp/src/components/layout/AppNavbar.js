@@ -8,7 +8,7 @@ class AppNavbar extends Component {
         <div className="container">
           <Link to="/" className="navbar-brand">
             {" "}
-            Client Panel{" "}
+            Clientz Dollaz{" "}
           </Link>
           <button
             className="navbar-toggler"
@@ -18,11 +18,11 @@ class AppNavbar extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collase" id="navbarMain">
+          <div className="collapse navbar-collapse" id="navbarMain">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link to="/" className="nav-link">
-                  Dashboard
+                  Da board
                 </Link>
               </li>
             </ul>
