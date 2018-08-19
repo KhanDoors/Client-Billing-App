@@ -6,7 +6,6 @@ import { firestoreConnect } from "react-redux-firebase";
 import PropTypes from "prop-types";
 import Spinner from "../layout/Spinner";
 import classnames from "classnames";
-// import Clients from "./Clients";
 
 class ClientDetails extends Component {
   state = {
