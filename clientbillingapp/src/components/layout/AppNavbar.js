@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import { firebaseConnect } from "react-redux-firebase";
 
 class AppNavbar extends Component {
@@ -29,15 +29,14 @@ class AppNavbar extends Component {
 
   render() {
     const { isAuthenticated } = this.state;
-
     const { auth } = this.props;
+    const { allowRegistration } = this.props.settings;
 
     return (
       <nav className="navbar navbar-expand-md navbar-dark bg-primary mb-4">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            {" "}
-            Clientz Dollaz{" "}
+            ClientPanel
           </Link>
           <button
             className="navbar-toggler"
@@ -52,25 +51,23 @@ class AppNavbar extends Component {
               {isAuthenticated ? (
                 <li className="nav-item">
                   <Link to="/" className="nav-link">
-                    da Board
+                    Dashboard
                   </Link>
                 </li>
               ) : null}
             </ul>
             {isAuthenticated ? (
-              <ul className="navbar-nav mr-auto">
+              <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a href="#!" className="nav-link">
                     {auth.email}
                   </a>
                 </li>
-
                 <li className="nav-item">
                   <Link to="/settings" className="nav-link">
                     Settings
                   </Link>
                 </li>
-
                 <li className="nav-item">
                   <a
                     href="#!"
@@ -79,6 +76,21 @@ class AppNavbar extends Component {
                   >
                     Logout
                   </a>
+                </li>
+              </ul>
+            ) : null}
+
+            {allowRegistration && !isAuthenticated ? (
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link to="/login" className="nav-link">
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/register" className="nav-link">
+                    Register
+                  </Link>
                 </li>
               </ul>
             ) : null}
