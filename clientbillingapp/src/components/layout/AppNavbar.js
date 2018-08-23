@@ -36,7 +36,7 @@ class AppNavbar extends Component {
       <nav className="navbar navbar-expand-md navbar-dark bg-primary mb-4">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            ClientPanel
+            The Books
           </Link>
           <button
             className="navbar-toggler"
@@ -51,7 +51,7 @@ class AppNavbar extends Component {
               {isAuthenticated ? (
                 <li className="nav-item">
                   <Link to="/" className="nav-link">
-                    Dashboard
+                    The Rundown
                   </Link>
                 </li>
               ) : null}
