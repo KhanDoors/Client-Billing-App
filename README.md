@@ -1,16 +1,8 @@
 # Client-Billing-App
 
-This is a React / Firestore app for keeping client accounts. This site is hosted on Firebase.
+This is a React / Firestore app for keeping client accounts. This Project is deployed on Firebase: https://client-billing-app.firebaseapp.com/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
 ## Supported Browsers
 
